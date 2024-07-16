@@ -1,0 +1,68 @@
+.full{
+    display: inline-block;
+    background-image:url(imagenes/Blue-And-Silver-Christmas-Background-45078855-1.png);
+    background-size: cover;
+    width: 600px;
+    height: 400px;
+}
+
+.text{
+    display:flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 110px;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#feliz-navidad{
+    display: flex;
+    justify-self: center;
+    color: rgb(210, 0, 0);
+    text-shadow: 2px 2px 5px rgb(37, 36, 36);
+    transition: color 0.3s;
+    font-size: 50px;
+    font-style: italic;
+    animation: parpadeo 0.44s infinite;
+}
+
+#feliz-navidad:hover{
+    color:rgb(56, 184, 1)
+}
+
+.img{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+
+}
+#img1{
+    display: flex;
+    transform: rotate(30deg);
+    margin-left: 8px;
+
+}
+
+#regalo{
+    display: flex;
+    transform: rotate(-20deg);
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.img2{
+    display: flex;
+    width: 600px;
+    height: 200px;
+    justify-content: center;
+
+}
+
+#guirnalda{
+    display: flex;
+    justify-self: center;
+}

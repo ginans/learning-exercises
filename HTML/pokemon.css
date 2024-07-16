@@ -1,0 +1,189 @@
+
+body{
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/01073865290819.5d61d475f0072.jpg);
+    background-size:cover;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center;
+}
+#div-title{
+    text-align: center;
+    color: aliceblue;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex: 0 1 25%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      background-color: #00000048;
+      text-align: center;
+      border: 1px solid #ffffff;
+      margin: 10px;
+      
+}
+
+#general{ 
+    color:aliceblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    height: 100vh;
+
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+#tipo-agua {
+    background-color: rgb(0, 221, 255);
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #000dc2;
+      margin: 10px;
+      border-radius: 15px
+}
+
+#tipo-agua > h1{
+    background-color: #0057891e;
+}
+
+#tipo-agua > h3{
+    background-color: #0057891e;
+}
+
+#tipo-hoja {
+    background-color: rgb(70, 255, 80);
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #00aa2d;
+      margin: 10px;
+      border-radius: 15px
+}
+
+#tipo-hoja > h1{
+    background-color: #0057891e;
+}
+
+#tipo-hoja > h3{
+    background-color: #0057891e;
+}
+
+#tipo-veneno {
+    background-color: rgb(212, 94, 255);
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ff00e6;
+      margin: 10px;
+      border-radius: 15px
+}
+
+#tipo-veneno > h1{
+    background-color: #0057891e;
+}
+
+#tipo-veneno > h3{
+    background-color: #0057891e;
+}
+
+#tipo-hielo {
+    background-color: rgb(148, 232, 245);
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #0092a2;
+      margin: 10px;
+      border-radius: 15px
+}
+
+#tipo-hielo > h1{
+    background-color: #0057891e;
+}
+
+#tipo-hielo > h3{
+    background-color: #0057891e;
+}
+ 
+#tipo-hada {
+    background-color: rgb(255, 195, 219);
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ff7fd4;
+      margin: 10px;
+      border-radius: 15px
+}
+
+#tipo-hada > h1{
+    background-color: #0057891e;
+}
+
+#tipo-hada > h3{
+    background-color: #0057891e;
+}
+     
+#tipo-dragon {
+    background-color: rgb(106, 170, 255);
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #005de8;
+      margin: 10px;
+      border-radius: 15px
+}
+
+#tipo-dragon > h1{
+    background-color: #0057891e;
+}
+
+#tipo-dragon > h3{
+    background-color: #0057891e;
+}
+     
+#tipo-psiquico {
+    background-color: rgb(255, 175, 70);
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #e76c00;
+      margin: 10px;
+      border-radius: 15px
+}
+
+#tipo-psiquico > h1{
+    background-color: #0057891e;
+}
+
+#tipo-psiquico > h3{
+    background-color: #0057891e;
+}
+     
+#tipo-fantasma {
+    background-color: rgb(106, 59, 160);
+    flex: 0 1 22%; /* Cada elemento ocupará el 25% del ancho del contenedor */
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #a621e3;
+      margin: 10px;
+      border-radius: 15px
+}
+
+#tipo-fantasma > h1{
+    background-color: #0000001e;
+}
+
+#tipo-fantasma > h3{
+    background-color: #0000001e;
+}

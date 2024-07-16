@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pago.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Formulario de pago</title>
+</head>
+<body class="body">
+    
+    <form id= "form" action="/submit" method="post">
+        <div class="caja-exterior">
+         <div class="pago-ejemplo">
+            <h2 id="titulo">Formulario de pago de ejemplo</h2>
+            </div>
+            <div class="tarjeta">
+                <div class="missing-fields">Faltan algunos campos</div>
+                <div class="datos-tarjeta">
+                    <fieldset>
+                        <label for="numero_tarjeta">Numero de tarjeta # </label>
+                        <input type="number" name="numero_tarjeta" value="" size="20" placeholder="####################"/>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="cvc">CVC # </label>
+                        <input type="number" name="cvc" value="" size="3" placeholder="###"/>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="monto">Monto: </label>
+                        <input type="number" name="monto" value="" placeholder="Ejemplo: 100000"/>
+                    </fieldset>
+                </div>
+
+                <div class="datos-personales" id="personales">
+                    <div class="nombre-ciudad-tipopago">
+                        <fieldset>
+                            <label for="nombre">Nombre: </label>
+                            <input id="nombre" type="text" name="primernombre" value="" placeholder="Ejemplo: Mario"/>
+                        </fieldset>
+
+                        <fieldset>
+                            <label for="ciudad">Ciudad: </label>
+                            <input id="ciudad" type="text" name="ciudad" value="" placeholder=" Ejemplo: Santiago"/>
+                        </fieldset>
+                        <fieldset>
+                            <label for="medio-pago">Medio de pago: </label>
+                            <input id= "medio-pago" type="radio" name="medio-pago" value="credito" />
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            <input type="radio" name="medio-pago" value="debito" />
+                            <i class="fa-regular fa-credit-card"></i>
+                            <input type="radio" name="medio-pago" value="transferencia" />
+                            <i class="fa-brands fa-cc-paypal"></i>
+                        </fieldset>
+
+                        <div id="botones">
+                            <button>Cancelar</button>
+                            <input id= "enviar" type="submit" value="Enviar" />
+                        </div>
+                    </div>
+
+                    <div class="apellido-estado-codigo-mensaje">
+                        <fieldset>
+                         <label for="apellido">Apellido: </label>
+                            <input type="text" name="apellido" value="" placeholder="Ejemplo: Castañeda"/>
+                        </fieldset>
+
+                        <div class="estado-codigo">
+                            <fieldset>
+                                <label for="region">Región: </label>
+                                <select name="region"> 
+                                    <option value="arica-parinacota-tarapaca"> Tarapacá </option>
+                                    <option value="antofagasta">Antofagasta</option>
+                                    <option value="atacama-coquimbo">Atacama y Conquimbo</option>
+                                    <option value="valparaiso">Valparaiso</option>
+                                    <option value="ohiggins">O'higgins</option>
+                                    <option value="maule">Maule</option>
+                                    <option value="ñuble-biobio">Ñuble y el Bio Bio</option>
+                                    <option value="araucania">La Araucanía</option>
+                                    <option value="rios">Los Rios</option>
+                                    <option value="lagos">Los Lagos</option>
+                                    <option value="aysen">Aysén</option>
+                                    <option value="magallanes">Magallanes</option>
+                                    <option value="metropolitana">Metropolitana</option>
+                                </select>
+
+
+                            </fieldset>
+                            <fieldset>
+                                <label for="codigo-postal">Código Postal: </label>
+                                <input type="number" name="codigo-postal" value=""/>
+                            </fieldset>
+                        </div>
+
+                        <fieldset>
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" cols="100" placeholder="Escribe un mesaje aquí"></textarea>
+                        </fieldset>
+                    </div>
+
+                </div>
+
+            </div>
+
+        
+
+        </div>
+
+    </form>
+    <script src="pago.js"></script>
+</body>
+</html>

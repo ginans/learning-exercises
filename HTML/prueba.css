@@ -1,0 +1,37 @@
+.post{
+    width: 340px;
+}
+
+.post-header{
+    display: flex;
+    align-items: flex-end;
+}
+
+.user{
+    display:flex;
+    width: 340px;
+    align-items: center;
+}
+
+.dots{
+    display: flex;
+    width: 340px;
+    justify-content:flex-end;
+    margin-bottom: 15px;
+}
+
+.post-iconos{
+    display:flex;
+    flex-direction: row;
+}
+
+.fa-regular {
+    margin-right: 10px; /* Añade un margen derecho de 10px a cada icono */
+    font-size: 23px;
+}
+
+.save{
+    display: flex;
+    width: 340px;
+    justify-content: flex-end;
+}
