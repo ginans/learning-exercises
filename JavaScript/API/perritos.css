@@ -1,0 +1,46 @@
+
+body{
+    background-image:url(/github/HTML/imagenes/patitas.png);
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.2px;
+    word-spacing: 1.2px;
+    color: #000000;
+    text-shadow: 0 4px 8px rgba(1, 77, 116, 0.477);
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 1240px;
+    height: 160px;
+    background-color: rgba(159, 231, 251, 0.608);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.perro{
+    background-color: rgba(174, 235, 255, 0.747);
+    border-radius: 8px;
+    margin: 10px;
+    width: 200px;
+    height: fit-content;
+    text-align: center;
+    padding: 10px;
+}
+
+.perro img{
+    width: 100%;
+    border-radius: 8px;
+}

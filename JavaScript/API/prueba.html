@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Characters</title>
+</head>
+<body>
+    <input type="text" id="entrada" placeholder="Buscar personaje">
+    <button id="search-button">Buscar</button>
+    <div id="container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const barra_busqueda = document.getElementById("entrada");
+            const contenedor = document.getElementById("container");
+            const boton = document.getElementById("search-button");
+            const apiKey = "a5c451c1eda580afeafea91d9ef84bfa";
+
+            const fetch_personajes = async () => {
+                try {
+                    const response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?apikey=${apiKey}`);
+                    const data = await response.json();
+                    console.log(data); // Añadido para depuración
+                    const resultados_personajes = data.data.results;
+                    for (const personaje of resultados_personajes) {
+                        display_personaje(personaje);
+                    }
+                } catch (error) {
+                    console.error("Error fetching character data:", error);
+                }
+            };
+
+            const display_personaje = (character) => {
+                const elemento = document.createElement("div");
+                elemento.classList.add("personaje");
+                elemento.innerHTML = `
+                    <img src="${character.thumbnail.path}.${character.thumbnail.extension}" alt="${character.name}">
+                    <h2>${character.name}</h2>
+                    <p>ID: ${character.id}</p>
+                    <p>${character.description || "No description available"}</p>
+                `;
+                contenedor.appendChild(elemento);
+            };
+
+            const buscar_personaje = async () => {
+                const search_term = barra_busqueda.value.trim();
+                if (!search_term) {
+                    return;
+                }
+                try {
+                    contenedor.innerHTML = "";
+                    const response = await fetch(`https://gateway.marvel.com:443/v1/public/characters?name=${encodeURIComponent(search_term)}&apikey=${apiKey}`);
+                    console.log(response); // Añadido para depuración
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log(data); // Añadido para depuración
+                        const character_data = data.data.results;
+                        if (character_data.length > 0) {
+                            for (const character of character_data) {
+                                display_personaje(character);
+                            }
+                        } else {
+                            contenedor.innerHTML = "<p>Ese personaje no existe</p>";
+                        }
+                    } else {
+                        console.error("Ese personaje no existe");
+                        contenedor.innerHTML = "<p>Ese personaje no existe</p>";
+                    }
+                } catch (error) {
+                    console.error("Error buscando personaje:", error);
+                }
+            };
+
+            boton.addEventListener("click", buscar_personaje);
+            barra_busqueda.addEventListener("keypress", (event) => {
+                if (event.key === "Enter") {
+                    buscar_personaje();
+                }
+            });
+
+            fetch_personajes();
+        });
+    </script>
+</body>
+</html>
